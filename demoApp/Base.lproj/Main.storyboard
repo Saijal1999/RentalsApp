@@ -1,24 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="Introduction" customModule="demoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sx8-xd-2Up">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="0W9-Cj-bIy">
+                                <rect key="frame" x="67" y="116" width="257" height="151"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oze-RX-vDG">
+                                <rect key="frame" x="28" y="535" width="335" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="9uH-EK-obS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="K8S-t6-czc"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <size key="titleShadowOffset" width="0.0" height="5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I am a tenant">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tenant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="djq-k7-Xcc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1od-Xo-Fh7">
+                                <rect key="frame" x="28" y="598" width="335" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="6bT-f3-Tj6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="dqp-uL-pAB"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <size key="titleShadowOffset" width="0.0" height="5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I am looking for a tenant">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="landlord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ybk-z4-VSv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helping you find a perfect place or a perfect tenant! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKY-Xx-zcK">
+                                <rect key="frame" x="22" y="412" width="347" height="89"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h04-jf-wQL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1od-Xo-Fh7" secondAttribute="bottom" constant="191" id="6YK-Z0-U0U"/>
+                            <constraint firstItem="oze-RX-vDG" firstAttribute="top" secondItem="sx8-xd-2Up" secondAttribute="top" constant="535" id="AUA-PH-trT"/>
+                            <constraint firstItem="0W9-Cj-bIy" firstAttribute="leading" secondItem="sx8-xd-2Up" secondAttribute="leading" constant="67" id="AsA-yc-Ncp"/>
+                            <constraint firstItem="0W9-Cj-bIy" firstAttribute="top" secondItem="sx8-xd-2Up" secondAttribute="top" constant="116" id="Li3-IZ-tGL"/>
+                            <constraint firstAttribute="trailing" secondItem="0W9-Cj-bIy" secondAttribute="trailing" constant="66" id="NtR-sj-y1a"/>
+                            <constraint firstAttribute="trailing" secondItem="QKY-Xx-zcK" secondAttribute="trailing" constant="21" id="PcA-5y-fg5"/>
+                            <constraint firstItem="QKY-Xx-zcK" firstAttribute="top" secondItem="sx8-xd-2Up" secondAttribute="top" constant="412" id="RZZ-JR-2Qh"/>
+                            <constraint firstItem="QKY-Xx-zcK" firstAttribute="leading" secondItem="sx8-xd-2Up" secondAttribute="leading" constant="22" id="RaJ-fy-EcW"/>
+                            <constraint firstItem="1od-Xo-Fh7" firstAttribute="leading" secondItem="sx8-xd-2Up" secondAttribute="leading" constant="28" id="RuS-wd-TwN"/>
+                            <constraint firstItem="oze-RX-vDG" firstAttribute="leading" secondItem="sx8-xd-2Up" secondAttribute="leading" constant="28" id="SXQ-Rc-ILh"/>
+                            <constraint firstItem="1od-Xo-Fh7" firstAttribute="top" secondItem="sx8-xd-2Up" secondAttribute="top" constant="598" id="T8S-Gs-K3x"/>
+                            <constraint firstAttribute="trailing" secondItem="oze-RX-vDG" secondAttribute="trailing" constant="27" id="WVQ-fb-Mf8"/>
+                            <constraint firstAttribute="bottom" secondItem="oze-RX-vDG" secondAttribute="bottom" constant="254" id="Xdt-4Q-7NM"/>
+                            <constraint firstAttribute="bottom" secondItem="0W9-Cj-bIy" secondAttribute="bottom" constant="577" id="jF1-8f-WvO"/>
+                            <constraint firstAttribute="bottom" secondItem="QKY-Xx-zcK" secondAttribute="bottom" constant="343" id="rd6-v6-wEU"/>
+                            <constraint firstAttribute="trailing" secondItem="1od-Xo-Fh7" secondAttribute="trailing" constant="27" id="wIy-fv-GQ0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.53846153846153" y="3.5545023696682461"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="YTz-ha-lGm">
+            <objects>
+                <viewController id="aq0-em-Zlg" customClass="LoginViewController" customModule="ImmiCan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wwb-hM-2QR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="J20-rO-en4">
+                                <rect key="frame" x="20" y="371" width="350" height="141"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7S-mD-KcB">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="G8I-Go-cbi"/>
+                                            <constraint firstAttribute="height" constant="55" id="hfE-ss-8Q4"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="29"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEn-qj-tAh">
+                                        <rect key="frame" x="0.0" y="86" width="350" height="55"/>
+                                        <color key="backgroundColor" red="0.87450980389999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="PLz-9F-C5K"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="Qkd-KH-hAn"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="29"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksC-By-YRV">
+                                <rect key="frame" x="114" y="520" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AvB-V7-qZ7"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password ?" titleAlignment="trailing">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="acj-ex-oRI">
+                                <rect key="frame" x="20" y="573" width="350" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAG-6f-atW">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="55"/>
+                                        <color key="backgroundColor" red="1" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="0hz-Kv-cMp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="vaz-JA-D3S"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="29"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="aq0-em-Zlg" eventType="touchUpInside" id="o3M-V0-IWO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbW-Dy-CYd">
+                                        <rect key="frame" x="0.0" y="73" width="350" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="KbD-sT-XAj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="QwV-no-X1n"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemGray3Color"/>
+                                        <size key="titleShadowOffset" width="0.0" height="5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                            <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="29"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-cU-sJ2">
+                                <rect key="frame" x="111" y="292" width="160" height="24.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="TI9-l0-OjE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lw8-vT-AOP">
+                                <rect key="frame" x="121" y="87" width="140" height="179.66666666666666"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="0iU-83-29W"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ydt-Lo-Sws"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lw8-vT-AOP" firstAttribute="leading" secondItem="Wwb-hM-2QR" secondAttribute="leading" constant="121" id="CAI-ps-sD6"/>
+                            <constraint firstItem="Lw8-vT-AOP" firstAttribute="top" secondItem="Wwb-hM-2QR" secondAttribute="top" constant="87" id="QRo-ch-s9p"/>
+                            <constraint firstAttribute="bottom" secondItem="Lw8-vT-AOP" secondAttribute="bottom" constant="577.33000000000004" id="rJm-P9-UX8"/>
+                            <constraint firstAttribute="trailing" secondItem="Lw8-vT-AOP" secondAttribute="trailing" constant="121" id="w2a-OP-evd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRdaius">
+                                <integer key="value" value="29"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="LTM-Sn-iDm"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="S7S-mD-KcB" id="k7z-o4-EYB"/>
+                        <outlet property="passwordTextField" destination="bEn-qj-tAh" id="pdn-1m-Qwk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qr0-0h-4nq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.53846153846155" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchLogo" width="242" height="277"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
